@@ -1,0 +1,58 @@
+[
+    {
+        "id": 2,
+        "name": "Abeeha",
+        "email": "abeeeha@gmail.com",
+        "address": "Lahore, Pakistan",
+        "phone": "0324-2786572"
+    },
+    {
+        "id": 3,
+        "name": "Batool",
+        "email": "batool@gmail.com",
+        "address": "Islamabad, Pakistan",
+        "phone": "0326-87366660"
+    },
+    {
+        "id": "4",
+        "name": "Sabahat",
+        "email": "sabaht@gmail.com",
+        "address": "Karachi, Pakistan",
+        "phone": "0334-9809088"
+    },
+    {
+        "id": 5,
+        "name": "Rida",
+        "email": "rida@gmail.com",
+        "address": "Lahore, Pakistan",
+        "phone": "0321-87337663"
+    },
+    {
+        "id": 6,
+        "name": "Mehak",
+        "email": "mehak@gmail.com",
+        "address": "Lahore, Pakistan",
+        "phone": "0344-76348732"
+    },
+    {
+        "id": 7,
+        "name": "Hina",
+        "email": "hina@gmail.com",
+        "address": "Lahore, Pakistan",
+        "phone": "0314-56356773"
+    },
+    {
+        "id": "8",
+        "name": "Alia",
+        "email": "alia@gmail.com",
+        "address": "Dammam, KSA",
+        "phone": "0343-2873278"
+    },
+    {
+        "id": "9",
+        "name": "Nabeelah",
+        "email": "nabeelah@gmail.com",
+        "address": "Karachi, Pakistan",
+        "phone": "0345-98343984"
+    }
+]
