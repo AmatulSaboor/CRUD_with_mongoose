@@ -6,11 +6,10 @@ const User = require('./models/user.js');
 const mongoose = require('mongoose');
 const uri = 'mongodb+srv://Admin:admin123@cluster0.vzs9g.mongodb.net/myDB?retryWrites=true&w=majority';
 // const client = new MongoClient(uri, {useNewUrlParser: true, useUnifiedTopology: true});
-
 app.use(express.urlencoded());
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
-
+app.use(express.json());
 (async () => {
   await mongoose.connect(uri);
   console.log('connected to mongoose through async function');
@@ -22,6 +21,7 @@ app.get('/', async (req, res) => {
   //   .then( result => console.log('connected to mongoose'))
   //   .catch( err => console.log('error connecting to mongoose', err));
   // using async IMEF
+  console.log('inside read')
     const userData = await User.find();
     res.render('./index.ejs', {userData});
 });
@@ -46,11 +46,10 @@ app.get('/delete/:userId', async (req, res) => {
 app.post('/edit', (req, res) =>{
   console.log('inside update');
   console.log(req.body);
-  
-    User.findByIdAndUpdate(req.body._id, {$set: {'name':req.body.name, 'email':req.body.email, 'address':req.body.address, 'phone':req.body.phone}}, (err, result) => {
-      if (err) throw err;
-      res.redirect('/');
-    });
+  User.findByIdAndUpdate(req.body._id, {$set: {'name':req.body.name, 'email':req.body.email, 'address':req.body.address, 'phone':req.body.phone}}, (err, result) => {
+    if (err) throw err;
+    res.redirect('/');
+  });
 });
 
 app.listen(port);
